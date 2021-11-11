@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # Remove all <none> images
 
-if [ $(docker images -f "dangling=true" -q) ]
+if [[ $(docker images -f "dangling=true" -q) ]]
 then
     docker rmi $(docker images -f "dangling=true" -q)
     echo "DONE"
