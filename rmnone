@@ -5,4 +5,6 @@ if [[ $(docker images -f "dangling=true" -q) ]]
 then
     docker rmi $(docker images -f "dangling=true" -q)
     echo "DONE"
+else
+    echo "Cannot find any <none> images"
 fi
